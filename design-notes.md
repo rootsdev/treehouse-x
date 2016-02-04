@@ -14,6 +14,7 @@ A (separate?) server serves the file using the gedcom-x RS specification.
 
 -   C# (because the majority of the people at this table at least know of that language)
 	EDIT: people left the table.  Now we are in Python!
+	EDIT: we were just told php has a built in server; we are now 1/3 done!
 - use the FS gedcomx SDK
 - use someone else's gedcom parser if we can find one
 
