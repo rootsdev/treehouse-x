@@ -18,7 +18,12 @@ A (separate?) server serves the file using the gedcom-x RS specification.
 	EDIT: we are <del>now using</del> <ins>considering</ins> java because we found a [gedcom5 to gedcomx converter](https://github.com/FamilySearch/gedcom5-conversion) in that language.  We are also considering using a [java web socket server](https://github.com/TooTallNate/Java-WebSocket) because none of us have spun up a java web server and been happy with the result. 
 - use the FS gedcomx SDK
 - use someone else's gedcom parser if we can find one
-- If we use the gedcom5 to gedcomx converter linked above, we need to ensure it works correctly. Initial testing is not promissing.
+- If we use the gedcom5 to gedcomx converter linked above, we need to ensure it works correctly. Initial testing is not promissing because it appears to depend on a project that has moved/been removed.
+
+## TODO:
+
+- contact Dallan Quass to see what happened to the gedcom parser he used to host at https://github.com/DallanQ/gedcom 
+
 
 # Open questions
 
