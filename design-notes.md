@@ -15,7 +15,7 @@ A (separate?) server serves the file using the gedcom-x RS specification.
 -   C# (because the majority of the people at this table at least know of that language)
 	EDIT: people left the table.  Now we are in Python!
 	EDIT: we were just told php has a built in server; we are now 1/3 done!
-	EDIT: we are --now using--considering java because we found a [gedcom5 to gedcomx converter](https://github.com/FamilySearch/gedcom5-conversion) in that language.  We are also considering using a [java web socket server](https://github.com/TooTallNate/Java-WebSocket) because none of us have spun up a java web server and been happy with the result. 
+	EDIT: we are <del>now using</del><ins>considering</ins> java because we found a [gedcom5 to gedcomx converter](https://github.com/FamilySearch/gedcom5-conversion) in that language.  We are also considering using a [java web socket server](https://github.com/TooTallNate/Java-WebSocket) because none of us have spun up a java web server and been happy with the result. 
 - use the FS gedcomx SDK
 - use someone else's gedcom parser if we can find one
 
