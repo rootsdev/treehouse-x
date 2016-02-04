@@ -1,0 +1,1 @@
+These files were written to parse one particular `.ged` file created by Legacy Family Tree by one researcher who sent me their file for another two researchers who had specific needs for parts of the data in particular formats.  Might or might not prove useful for something. —Luther
