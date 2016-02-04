@@ -12,8 +12,9 @@ A (separate?) server serves the file using the gedcom-x RS specification.
 
 # Decisions
 
-- C# (because the majority of the people at this table at least know of that language)
-- use the FS gedcomx API
+-   C# (because the majority of the people at this table at least know of that language)
+	EDIT: people left the table.  Now we are in Python!
+- use the FS gedcomx SDK
 - use someone else's gedcom parser if we can find one
 
 # Open questions
