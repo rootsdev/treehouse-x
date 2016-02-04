@@ -12,10 +12,10 @@ A (separate?) server serves the file using the gedcom-x RS specification.
 
 # Decisions
 
--   C# (because the majority of the people at this table at least know of that language)
-	EDIT: people left the table.  Now we are in Python!
-	EDIT: we were just told php has a built in server; we are now 1/3 done!
-	EDIT: we are <del>now using</del> <ins>considering</ins> java because we found a [gedcom5 to gedcomx converter](https://github.com/FamilySearch/gedcom5-conversion) in that language.  We are also considering using a [java web socket server](https://github.com/TooTallNate/Java-WebSocket) because none of us have spun up a java web server and been happy with the result. 
+-   C# (because the majority of the people at this table at least know of that language)    
+	EDIT: people left the table.  Now we are in Python!    
+	EDIT: we were just told php has a built in server; we are now 1/3 done!    
+	EDIT: we are <del>now using</del> <ins>considering</ins> java because we found a [gedcom5 to gedcomx converter](https://github.com/FamilySearch/gedcom5-conversion) in that language.  We are also considering using a [java web socket server](https://github.com/TooTallNate/Java-WebSocket) because none of us have spun up a java web server and been happy with the result.
 - use the FS gedcomx SDK
 - use someone else's gedcom parser if we can find one
 - If we use the gedcom5 to gedcomx converter linked above, we need to ensure it works correctly. Initial testing is not promissing because it appears to depend on a project that has moved/been removed.
@@ -23,6 +23,7 @@ A (separate?) server serves the file using the gedcom-x RS specification.
 ## TODO:
 
 - contact Dallan Quass to see what happened to the gedcom parser he used to host at https://github.com/DallanQ/gedcom 
+	- resolved; project moved to [https://github.com/FamilySearch/gedcom](https://github.com/FamilySearch/gedcom)
 
 
 # Open questions
