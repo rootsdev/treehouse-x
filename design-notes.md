@@ -20,6 +20,9 @@ A (separate?) server serves the file using the gedcom-x RS specification.
 
 - what DB
 - who hosts it
-- do we need to use oath2
 - does each submission get its own URL or its own ID within a single "tree"?
 
+# Delayed for future
+
+- add oath2
+- add a front-end using open-source tree visualization built on top of the REST
