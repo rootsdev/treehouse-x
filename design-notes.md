@@ -15,15 +15,20 @@ A (separate?) server serves the file using the gedcom-x RS specification.
 -   C# (because the majority of the people at this table at least know of that language)
 	EDIT: people left the table.  Now we are in Python!
 	EDIT: we were just told php has a built in server; we are now 1/3 done!
-	EDIT: we are <del>now using</del><ins>considering</ins> java because we found a [gedcom5 to gedcomx converter](https://github.com/FamilySearch/gedcom5-conversion) in that language.  We are also considering using a [java web socket server](https://github.com/TooTallNate/Java-WebSocket) because none of us have spun up a java web server and been happy with the result. 
+	EDIT: we are <del>now using</del> <ins>considering</ins> java because we found a [gedcom5 to gedcomx converter](https://github.com/FamilySearch/gedcom5-conversion) in that language.  We are also considering using a [java web socket server](https://github.com/TooTallNate/Java-WebSocket) because none of us have spun up a java web server and been happy with the result. 
 - use the FS gedcomx SDK
 - use someone else's gedcom parser if we can find one
 
 # Open questions
 
-- what DB
+- what DB (and what schema?)
+	- option: we convert to java objects and dump to [orientdb](http://orientdb.com/docs/last/Object-Database.html)
+	- option: we recreate the gedcom-x schema in RDB tables
+	- option: we store gedcom-x JSON in MongoDB
 - who hosts it
 - does each submission get its own URL or its own ID within a single "tree"?
+	- or a URL per user?
+	- the authentication will probably inform this decision.
 
 # Delayed for future
 
