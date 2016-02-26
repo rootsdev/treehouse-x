@@ -100,9 +100,10 @@ string[string] readPerson(ref bufFile f, string[string] notes) {
 		if (g.tag == "NOTE") {
 			if (`notes` !in ans) ans[`notes`] = g.content.strip;
 			else ans[`notes`] = ans[`notes`] ~ "\n----\n" ~g.content.strip;
-			if (g.xlink !is null)
+			if (g.xlink !is null) {
 				if (g.xlink in notes) ans[`notes`] ~= notes[g.xlink];
 				else ans[`notes`] ~= "see @"~g.xlink~"@";
+			}
 		}
 		nested ~= g;
 	}
@@ -163,9 +164,10 @@ string[string] readFamily(ref bufFile f, string[string] notes) {
 		if (g.tag == "NOTE") {
 			if (`notes` !in ans) ans[`notes`] = g.content.strip;
 			else ans[`notes`] = ans[`notes`] ~ "\n----\n" ~g.content.strip;
-			if (g.xlink !is null)
+			if (g.xlink !is null) {
 				if (g.xlink in notes) ans[`notes`] ~= notes[g.xlink];
 				else ans[`notes`] ~= "see @"~g.xlink~"@";
+			}
 		}
 		nested ~= g;
 	}
