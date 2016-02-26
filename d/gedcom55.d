@@ -190,7 +190,7 @@ void parseHead(Gedcomx self, ref gedNode node) {
 				exportTool = n.content;
 				break;
 			case `DEST`:
-				about ~= ["Exported with the intent of sending to "~n.content];
+				// no meaningful data here
 				break;
 			case `DATE`:
 				self.attribution.modified = parseDateNode(n);
@@ -269,16 +269,12 @@ void parseTopLevel(Gedcomx self, ref gedNode node) {
 			pragma(msg, `FIXME: add REPO parsing`);
 			break;
 		default:
-			stderr.writeln(node.tag);
+			stderr.writeln(`FIXME: unhandled tag `, node.tag, ` (`,__FILE__,`:`,__LINE__,`)`);
 	}
 }
 
-
-
-void main() {
-	import std.stdio;
-	auto gf = parseFile("/home/lat7h/fhist/gedparse/iowa.ged");
-	writeln(gf);
+Gedcomx gxFromGedcom(string filename) {
+	auto gf = parseFile(filename);
 	
 	Gedcomx result = new Gedcomx();
 	result.parseHead(gf.nodes[0]);
@@ -287,9 +283,22 @@ void main() {
 		result.parseTopLevel(node);
 	}
 	
-	writeln(gf.nodes[2].toXML);
-	writeln();
+	return result;
+}
+
+int main(string[] args) {
+	import std.stdio;
+	static import std.file;
+	if(args.length != 2 || !std.file.exists(args[1])) {
+		writeln(`USEAGE: `, args[0],` gedcomfile.ged`);
+		return 1;
+	} 
+	
+	Gedcomx result = gxFromGedcom(args[1]);
+
 	writeln(`<?xml version="1.0" encoding="UTF-8" standalone="yes"?>`);
 	writeln(result.toXML);
+
+	return 0;
 }
 
